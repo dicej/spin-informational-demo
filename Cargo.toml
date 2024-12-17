@@ -1,0 +1,11 @@
+[package]
+name = "informational"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasi = "0.13.3"
+wit-bindgen = "0.32.0"
+
+[lib]
+crate-type = ["cdylib"]

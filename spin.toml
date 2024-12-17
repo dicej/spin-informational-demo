@@ -1,0 +1,18 @@
+spin_manifest_version = 2
+
+[application]
+name = "informational"
+version = "0.1.0"
+authors = ["Joel Dice <joel.dice@gmail.com>"]
+description = ""
+
+[[trigger.http]]
+route = "/..."
+component = "informational"
+
+[component.informational]
+source = "target/wasm32-wasip2/release/informational.wasm"
+allowed_outbound_hosts = []
+[component.informational.build]
+command = "cargo build --target wasm32-wasip2 --release"
+watch = ["src/**/*.rs", "Cargo.toml"]
