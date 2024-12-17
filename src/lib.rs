@@ -7,7 +7,7 @@ use {
 
 mod bindings {
     wit_bindgen::generate!({
-        path: "../spin/wit",
+        path: "wit",
         world: "http-trigger",
         with: {
             "wasi:cli/environment@0.2.0": ::wasi::cli::environment,
